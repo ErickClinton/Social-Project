@@ -1,11 +1,15 @@
 import { Header } from './Header'
-import './global.css'
+import { GlobalStyle } from './styles/global'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
 
 export function App(){
   return(
-    <div>
+    <ThemeProvider theme={defaultTheme}>
+
       
       <Header />
-    </div>
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
