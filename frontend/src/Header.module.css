@@ -1,0 +1,28 @@
+.header{
+    background:var(--purpleDark);
+    display:flex;
+    position:relative;
+    justify-content:center;
+    padding:3.25rem 0;
+    
+}
+
+.button{
+    border:0;
+    border-radius:10px;
+    height:2.375rem;
+    width:5rem;
+    margin-left:5rem;
+    cursor:pointer;
+    
+}
+
+
+.button:hover{
+    
+    background:var(--OrangeRed);
+}
+.position{
+    
+    margin-left:85rem;
+}
