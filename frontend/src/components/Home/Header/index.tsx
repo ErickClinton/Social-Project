@@ -1,6 +1,5 @@
 import styles from './Header.module.css'
 import { ButtonContainer, HomeContainer,Logo,ContainerHeader,Light,Dark,Ball,Theme} from './Header.styles'
-import {NavLink} from 'react-router-dom'
 import { Moon,Sun} from "phosphor-react";
 
 export function Header(){

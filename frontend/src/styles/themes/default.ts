@@ -22,9 +22,11 @@ export const defaultTheme = {
     'purple':'#8284FA',
     'purpleDark':'#5E60CE',
     'black':'#0f0f10',
+    'black-box':'#121213',
     'blue':'#4EA8DE',
     'blueDark':'#1E6F9F',
     'OrangeRed':'#FF4500',
     'redDanger':'#E25858',
+    'gray':'#212122',
   }
   
