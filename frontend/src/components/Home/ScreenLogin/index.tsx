@@ -7,11 +7,11 @@ export function ScreenLogin(){
             
             <form>
 
-                <h1>Login</h1>
+                <h1>LOGIN</h1>
                 <p>User</p>
                 <input></input>
                 <p>Password</p>
-                <input></input>
+                <input type="password"></input>
                 <button>Login</button>
             </form>
             
