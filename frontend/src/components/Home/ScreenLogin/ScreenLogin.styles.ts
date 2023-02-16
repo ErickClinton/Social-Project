@@ -51,5 +51,9 @@ export const LoginContainer = styled.div`
         cursor: pointer;
         color: #121213;
         transition: all 1s;
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
     }
 `
