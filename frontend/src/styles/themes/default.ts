@@ -29,4 +29,14 @@ export const defaultTheme = {
     'redDanger':'#E25858',
     'gray':'#212122',
   }
-  
+  export const lightTheme={
+    body:'#fff',
+    fontColor:'#000'
+
+
+}
+
+
+export const darkMode ={
+    body:'#000'
+}

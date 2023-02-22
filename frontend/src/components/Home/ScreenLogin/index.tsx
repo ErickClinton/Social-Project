@@ -37,9 +37,9 @@ export function ScreenLogin(){
 
                 <h1>LOGIN</h1>
                 <p>User</p>
-                <input {...register('password')}></input>
+                <input {...register('login')} placeholder="Login"></input>
                 <p>Password</p>
-                <input type="password" placeholder="Login" {...register('login')}></input>
+                <input type="password" placeholder="password" {...register('password')}></input>
                 <button disabled={isLoginDisabled}>Login</button>
             </form>
             

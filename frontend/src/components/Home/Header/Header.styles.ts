@@ -10,7 +10,10 @@ export const HomeContainer =styled.div `
     padding:3.25rem 0;
     align-items:center;
     justify-content:space-between;
-    
+    input{
+            opacity: 0;
+            position: absolute;
+        }
     label{
         background-color: ${(props)=>props.theme['white-mode']};
         border-radius: 50px;
@@ -27,7 +30,7 @@ export const HomeContainer =styled.div `
         
 
         margin-right:2rem;
-
+        
         
     
     

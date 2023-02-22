@@ -1,5 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 
+
+interface Props{
+    tema:{
+        teste:string,
+    }
+}
+
 export const GlobalStyle = createGlobalStyle`
 
     *{
@@ -11,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
         outline: 0;
         box-shadow: 0 0 0 2px ${(props) => props.theme['green-500']};
     }
-
     body{
         background-color: ${(props) => props.theme['black']};
         color: ${(props) => props.theme['gray-300']};
@@ -20,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
         padding:0;
         margin:0;
     }
+    
 
     
     body,input,textarea,button{
@@ -29,3 +36,5 @@ export const GlobalStyle = createGlobalStyle`
     }
 
 `
+
+

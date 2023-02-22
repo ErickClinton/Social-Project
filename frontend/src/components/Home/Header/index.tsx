@@ -3,6 +3,10 @@ import { ButtonContainer, HomeContainer,Logo,ContainerHeader,Light,Dark,Ball,The
 import { Moon,Sun} from "phosphor-react";
 
 export function Header(){
+
+    
+
+
     return(
         <HomeContainer>
             <ContainerHeader>
@@ -12,6 +16,7 @@ export function Header(){
             </ContainerHeader>
             
             <Theme>
+                <input type="checkbox"/>
                 <label aria-hidden="true">
                     <Light aria-hidden="true"></Light>
                     <Dark aria-hidden="true"></Dark>
@@ -22,7 +27,7 @@ export function Header(){
                
                 
             </Theme>                
-                   
+                
         </HomeContainer>
         
     )
