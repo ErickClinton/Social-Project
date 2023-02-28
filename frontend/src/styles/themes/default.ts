@@ -28,6 +28,8 @@ export const defaultTheme = {
     'OrangeRed':'#FF4500',
     'redDanger':'#E25858',
     'gray':'#212122',
+    'blueFacebook':'#1877f2',
+    'blueDarkFacebook':'#0000cd',
   }
   export const lightTheme={
     body:'#fff',

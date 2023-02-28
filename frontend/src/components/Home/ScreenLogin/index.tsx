@@ -1,9 +1,9 @@
-import { LoginContainer } from "./ScreenLogin.styles";
+import { LoginContainer,ButtonForm,ContainerButtonLogin,ButtonFacebook,ButtonGmail } from "./ScreenLogin.styles";
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-
-
+import FacebookIcon from '../../../assets/FacebookIconCorrect.svg'
+import GoogleIcon from '../../../assets/GoogleIcon.svg'
 import * as zod from 'zod'
 
 const ValidationLogin = zod.object({
@@ -40,7 +40,17 @@ export function ScreenLogin(){
                 <input {...register('login')} placeholder="Login"></input>
                 <p>Password</p>
                 <input type="password" placeholder="password" {...register('password')}></input>
-                <button disabled={isLoginDisabled}>Login</button>
+                <ButtonForm disabled={isLoginDisabled}>Login</ButtonForm>
+                <ContainerButtonLogin>
+                    <ButtonFacebook>
+                        <img src={FacebookIcon}/>
+                        <span>Facebook</span>
+                    </ButtonFacebook>
+                    <ButtonGmail>
+                        <img src={GoogleIcon}/>
+                        <span>Gmail</span>
+                    </ButtonGmail>
+                </ContainerButtonLogin>
             </form>
             
             
