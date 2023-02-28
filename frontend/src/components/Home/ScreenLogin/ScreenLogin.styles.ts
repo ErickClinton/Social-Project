@@ -112,4 +112,23 @@ export const ButtonGmail=styled(BaseButton)`
         margin-right:1rem;
         
     }
+    &:hover{
+        background-color: ${(props)=>props.theme['gray-400']};
+    }
+`
+
+export const SignUpHere = styled.div`
+    width:66.5%;
+    margin-top:3rem;
+    border-radius:15px;
+    box-shadow: 0px 2px 22px 0px ${(props)=>props.theme['blue']};
+    padding: 1rem;
+    display: flex;
+    font-size:18px;
+    justify-content: center;
+    span{
+        display: flex;
+        
+        margin-right:0.5rem;
+    }
 `

@@ -1,4 +1,4 @@
-import { LoginContainer,ButtonForm,ContainerButtonLogin,ButtonFacebook,ButtonGmail } from "./ScreenLogin.styles";
+import { LoginContainer,ButtonForm,ContainerButtonLogin,ButtonFacebook,ButtonGmail,SignUpHere} from "./ScreenLogin.styles";
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -31,6 +31,7 @@ export function ScreenLogin(){
     const login = watch('login')
     const isLoginDisabled = !login
     return(
+        <div>
         <LoginContainer onSubmit={handleSubmit(handleDataLogin)}>
             
             <form>
@@ -52,8 +53,16 @@ export function ScreenLogin(){
                     </ButtonGmail>
                 </ContainerButtonLogin>
             </form>
-            
+              
             
         </LoginContainer>
+        
+
+        <SignUpHere>
+            <span>Don't have an account?</span>
+            <a href="">Sign up here</a>    
+        </SignUpHere>
+
+        </div>
     )
 }
