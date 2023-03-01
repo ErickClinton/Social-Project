@@ -1,12 +1,19 @@
+import { useState } from 'react';
 import styles from './Header.module.css'
 import { ButtonContainer, HomeContainer,Logo,ContainerHeader,Light,Dark,Ball,Theme} from './Header.styles'
 import { Moon,Sun} from "phosphor-react";
 
 export function Header(){
 
-    
+    const[theme,setTheme] = useState(true)
 
 
+    function chooseTheme(){
+        theme?(
+            setTheme(false)
+        ):(setTheme(true))
+        console.log(theme)
+    }
     return(
         <HomeContainer>
             <ContainerHeader>
@@ -27,7 +34,7 @@ export function Header(){
                
                 
             </Theme>                
-                
+                <button onClick={chooseTheme} >teste</button>
         </HomeContainer>
         
     )

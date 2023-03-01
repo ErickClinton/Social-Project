@@ -7,7 +7,7 @@ interface Props{
     }
 }
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyleDark = createGlobalStyle`
 
     *{
         margin: 0;
@@ -37,4 +37,32 @@ export const GlobalStyle = createGlobalStyle`
 
 `
 
+export const GlobalStyleLight = createGlobalStyle`
 
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :focus{
+        outline: 0;
+        #box-shadow: 0 0 0 2px ${(props) => props.theme['red-correct']};
+    }
+    body{
+        background-color: ${(props) => props.theme['white']};
+        color: ${(props) => props.theme['black']};
+        -webkit-font-smoothing:antialiased;
+        
+        padding:0;
+        margin:0;
+    }
+    
+
+    
+    body,input,textarea,button{
+        font-family: 'Roboto',sans-serif;
+        font-weight: 400px ;
+        font-size: 1rem;
+    }
+
+`

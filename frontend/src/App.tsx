@@ -1,4 +1,4 @@
-import { GlobalStyle } from './styles/global'
+import { GlobalStyleDark,GlobalStyleLight } from './styles/global'
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme, lightTheme } from './styles/themes/default'
 import { Router } from './Router'
@@ -6,7 +6,12 @@ import {BrowserRouter} from 'react-router-dom'
 import {useState} from 'react'
 
 
+function teste(){
+  console.log("TESTE")
+}
+
 export function App(){
+  const ChooseTheme = true
   /*
   const [theme,setTheme] = useState("Light")
 
@@ -18,8 +23,10 @@ export function App(){
       <BrowserRouter >
       <Router/>
       
+      {ChooseTheme ?(
+        <GlobalStyleDark  />
+      ):(<GlobalStyleLight  />)}
       
-      <GlobalStyle  />
       </BrowserRouter >
       </ThemeProvider>
     
