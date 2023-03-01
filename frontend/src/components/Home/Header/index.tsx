@@ -1,19 +1,13 @@
-import { useState } from 'react';
 import styles from './Header.module.css'
-import { ButtonContainer, HomeContainer,Logo,ContainerHeader,Light,Dark,Ball,Theme} from './Header.styles'
+import { ButtonContainer, HomeContainer,Logo,ContainerHeader,BallDark,BallLight,Theme} from './Header.styles'
 import { Moon,Sun} from "phosphor-react";
 
-export function Header(){
+interface chooseThemeProps{
+    ChooseTheme: boolean
+}
+export function Header({chooseTheme,theme}){
 
-    const[theme,setTheme] = useState(true)
-
-
-    function chooseTheme(){
-        theme?(
-            setTheme(false)
-        ):(setTheme(true))
-        console.log(theme)
-    }
+    
     return(
         <HomeContainer>
             <ContainerHeader>
@@ -23,18 +17,20 @@ export function Header(){
             </ContainerHeader>
             
             <Theme>
-                <input type="checkbox"/>
-                <label aria-hidden="true">
-                    <Light aria-hidden="true"></Light>
-                    <Dark aria-hidden="true"></Dark>
-                    <Sun size={32} />
+                
+                <ButtonContainer aria-hidden="true" onClick={chooseTheme}>
                     <Moon size={32} />
-                    <Ball></Ball>
-                </label>
-               
+                    <Sun size={28} />
+                    
+                    {theme?
+                        (<BallDark/>):
+                        (<BallLight/>)
+                    }
+                </ButtonContainer>
+                
                 
             </Theme>                
-                <button onClick={chooseTheme} >teste</button>
+                
         </HomeContainer>
         
     )

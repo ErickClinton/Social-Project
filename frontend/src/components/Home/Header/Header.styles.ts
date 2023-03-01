@@ -40,16 +40,16 @@ export const HomeContainer =styled.div `
 export const ButtonContainer = styled.button`
     border:0;
     border-radius:10px;
-    height:2.375rem;
-    width:5rem;
-    
+    height:2rem;
+    width:4rem;
+    margin-right:0.5rem;
     cursor:pointer;
-    transition: color 0.1s, background-color 0.1s;
-    background: ${(props)=> props.theme['red-correct']};
-    color: ${(props)=> props.theme['white']};
+    transition: color 0.1s, background-color 0.5s;
+    background: ${(props)=> props.theme['white']};
+    color: ${(props)=> props.theme['black']};
     &:hover{
 
-        background: ${(props)=>props.theme['green-300']};
+        background: ${(props)=>props.theme['gray-100']};
         
     }
 
@@ -77,24 +77,30 @@ export const Theme = styled.div`
     justify-content: space-between;
     color:${(props)=>props.theme['black']}
 `
-export const Ball = styled.div`
-    background-color: #0f0f10;
+export const BaseBall = styled.div`
+    background-color: ${(props)=>props.theme['black']};
     border-radius: 50%;
     position: absolute;
-    top: 2px;
+    top:1px;
     left: 2px;
-    height: 22px;
-    width: 22px;
+    height: 30px;
+    width: 30px;
+    transition: transform 1s linear;
+
+`
+
+
+export const BallDark = styled(BaseBall)`
+
     transform: translateX(0px);
-    transition: transform .3s linear;
-
-
-`
-
-export const Light = styled.i`
+    
+    
 
 `
 
-export const Dark = styled.i`
+
+export const BallLight = styled(BaseBall)`
+    transform: translateX(30px);
+    
 
 `

@@ -6,24 +6,25 @@ import {BrowserRouter} from 'react-router-dom'
 import {useState} from 'react'
 
 
-function teste(){
-  console.log("TESTE")
-}
+
 
 export function App(){
-  const ChooseTheme = true
-  /*
-  const [theme,setTheme] = useState("Light")
+  
+  const[theme,setTheme] = useState(true)
 
-    const themeToggler =() =>{
-        theme === "Light" ? setTheme('Dark'): setTheme("Light")
-    }*/ 
+
+  function chooseTheme(){
+      theme?(
+          setTheme(false)
+      ):(setTheme(true))
+      
+  }
   return(
     <ThemeProvider theme={defaultTheme }>
       <BrowserRouter >
-      <Router/>
+      <Router chooseTheme={chooseTheme} theme={theme}/>
       
-      {ChooseTheme ?(
+      {theme ?(
         <GlobalStyleDark  />
       ):(<GlobalStyleLight  />)}
       
