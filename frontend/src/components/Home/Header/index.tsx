@@ -1,12 +1,9 @@
+import { ButtonTheme } from '../../ButtonTheme'
 import styles from './Header.module.css'
-import { ButtonContainer, HomeContainer,Logo,ContainerHeader,BallDark,BallLight,Theme} from './Header.styles'
-import { Moon,Sun} from "phosphor-react";
+import {HomeContainer,Logo,ContainerHeader} from './Header.styles'
 
-interface chooseThemeProps{
-    chooseTheme:any
-    theme:any
-}
-export function Header({chooseTheme,theme}:chooseThemeProps){
+
+export function Header(){
 
     
     return(
@@ -17,20 +14,7 @@ export function Header({chooseTheme,theme}:chooseThemeProps){
 
             </ContainerHeader>
             
-            <Theme>
-                
-                <ButtonContainer aria-hidden="true" onClick={chooseTheme}>
-                    <Moon size={32} />
-                    <Sun size={28} />
-                    
-                    {theme?
-                        (<BallDark/>):
-                        (<BallLight/>)
-                    }
-                </ButtonContainer>
-                
-                
-            </Theme>                
+            <ButtonTheme />     
                 
         </HomeContainer>
         

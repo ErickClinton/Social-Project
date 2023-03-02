@@ -10,23 +10,13 @@ import {useState} from 'react'
 
 export function App(){
   
-  const[theme,setTheme] = useState<boolean>(true)
-
-
-  function chooseTheme(){
-      theme?(
-          setTheme(false)
-      ):(setTheme(true))
-      
-  }
+  
   return(
     <ThemeProvider theme={defaultTheme }>
       <BrowserRouter >
-      <Router chooseTheme={chooseTheme} theme={theme}/>
+      <Router />
       
-      {theme ?(
-        <GlobalStyleDark  />
-      ):(<GlobalStyleLight  />)}
+      
       
       </BrowserRouter >
       </ThemeProvider>

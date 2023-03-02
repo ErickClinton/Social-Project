@@ -1,18 +1,20 @@
+import { Outlet } from "react-router-dom";
 import { Header } from "../../components/Home/Header";
 import{ScreenLogin} from "../../components/Home/ScreenLogin"
 import {HomeContainer,LoginImgContainer}from "./Home.styles"
 
-export function Home({chooseTheme,theme}){
+export function Home(){
     
     return(
         <HomeContainer>
-            <Header chooseTheme={chooseTheme} theme={theme}/>
+            <Header />
             
             <LoginImgContainer>
                 <h1>IMAGEM </h1>
                 <ScreenLogin/>
                 
             </LoginImgContainer>
+            <Outlet/>
         </HomeContainer>
         
     )
