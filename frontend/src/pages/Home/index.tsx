@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "../../components/Home/Header";
-import{ScreenLogin} from "../../components/Home/ScreenLogin"
+
 import {HomeContainer,LoginImgContainer}from "./Home.styles"
+import { Header } from "./components/Header";
+import { ScreenLogin } from "./components/ScreenLogin";
 
 export function Home(){
     

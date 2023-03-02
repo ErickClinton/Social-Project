@@ -2,8 +2,8 @@ import { LoginContainer,ButtonForm,ContainerButtonLogin,ButtonFacebook,ButtonGma
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import FacebookIcon from '../../../assets/FacebookIconCorrect.svg'
-import GoogleIcon from '../../../assets/GoogleIcon.svg'
+import FacebookIcon from '../../../../assets/FacebookIconCorrect.svg'
+import GoogleIcon from '../../../../assets/GoogleIcon.svg'
 import * as zod from 'zod'
 
 const ValidationLogin = zod.object({
