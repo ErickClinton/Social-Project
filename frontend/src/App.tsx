@@ -10,7 +10,7 @@ import {useState} from 'react'
 
 export function App(){
   
-  const[theme,setTheme] = useState(true)
+  const[theme,setTheme] = useState<boolean>(true)
 
 
   function chooseTheme(){

@@ -3,9 +3,10 @@ import { ButtonContainer, HomeContainer,Logo,ContainerHeader,BallDark,BallLight,
 import { Moon,Sun} from "phosphor-react";
 
 interface chooseThemeProps{
-    ChooseTheme: boolean
+    chooseTheme:any
+    theme:any
 }
-export function Header({chooseTheme,theme}){
+export function Header({chooseTheme,theme}:chooseThemeProps){
 
     
     return(

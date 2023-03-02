@@ -3,8 +3,11 @@ import { Home } from './pages/Home/index'
 import { Login } from './pages/Login'
 import { SignUp } from './pages/SignUp'
 import {useState} from 'react'
-
-export function Router({chooseTheme,theme}){
+interface chooseThemeProps{
+    chooseTheme:any
+    theme:any
+}
+export function Router({chooseTheme,theme}:chooseThemeProps){
     
     return(
         <Routes>
